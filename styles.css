@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background: #0d0d0d; /* Deep matte black */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z8DAwMCA4zwQ4wKMDAwMDEwMTAzMzAwMAJ3FByoF0rA0AAAAAElFTkSuQmCC'); /* Subtle noise texture */
+    background-repeat: repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .neon-text {
+    color: #00ccff; /* Electric blue */
+    font-size: 2.5rem;
+    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .terminal {
+    margin: 1rem 0;
+  }
+  
+  #command {
+    background: #1a1a1a;
+    border: none;
+    color: #00ffcc;
+    font-family: 'Courier New', monospace;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+  }
+  
+  .code-block {
+    color: #00ffcc;
+    font-size: 1.2rem;
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+    min-height: 20px;
+  }
+  
+  .x-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #00ccff; /* Match the title */
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ccff;
+    transition: all 0.3s ease;
+  }
+  
+  .x-link:hover {
+    background: #00ffcc; /* Cyan hover to keep the vibe */
+    box-shadow: 0 0 20px #00ffcc;
+  }
+  
+  #vibe-counter {
+    color: #00ccff; /* Match the new scheme */
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .teaser {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  @keyframes glow {
+    0% { text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff; }
+    100% { text-shadow: 0 0 10px #00ccff, 0 0 25px #00ccff; }
+  }
