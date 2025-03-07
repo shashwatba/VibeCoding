@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background: #0d0d0d; /* Deep matte black */
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z8DAwMCA4zwQ4wKMDAwMDEwMTAzMzAwMAJ3FByoF0rA0AAAAAElFTkSuQmCC'); /* Subtle noise texture */
+    background: #0d0d0d;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z8DAwMCA4zwQ4wKMDAwMDEwMTAzMzAwMAJ3FByoF0rA0AAAAAElFTkSuQmCC');
     background-repeat: repeat;
     height: 100vh;
     display: flex;
@@ -12,12 +12,13 @@ body {
   
   .container {
     text-align: center;
+    padding: 20px; /* Add some breathing room on mobile */
   }
   
   .neon-text {
-    color: #00ccff; /* Electric blue */
+    color: #00ccff;
     font-size: 2.5rem;
-    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    font-family: 'Press Start 2P', cursive;
     text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff;
     animation: glow 2s ease-in-out infinite alternate;
   }
@@ -31,8 +32,8 @@ body {
     border: none;
     color: #00ffcc;
     font-family: 'Courier New', monospace;
+    font-size: 16px; /* Prevents zoom on mobile */
     padding: 0.5rem;
-    font-size: 16px;
     width: 100%;
     max-width: 300px;
     outline: none;
@@ -53,7 +54,7 @@ body {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.5rem 1rem;
-    background: #00ccff; /* Match the title */
+    background: #00ccff;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
@@ -62,12 +63,12 @@ body {
   }
   
   .x-link:hover {
-    background: #00ffcc; /* Cyan hover to keep the vibe */
+    background: #00ffcc;
     box-shadow: 0 0 20px #00ffcc;
   }
   
   #vibe-counter {
-    color: #00ccff; /* Match the new scheme */
+    color: #00ccff;
     font-size: 1rem;
     margin-top: 1rem;
   }
@@ -81,4 +82,17 @@ body {
   @keyframes glow {
     0% { text-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff; }
     100% { text-shadow: 0 0 10px #00ccff, 0 0 25px #00ccff; }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .neon-text {
+      font-size: 1.8rem; /* Scale down title */
+    }
+    #command {
+      max-width: 90%; /* Fit better on small screens */
+    }
+    .code-block {
+      font-size: 1rem; /* Slightly smaller output */
+    }
   }
