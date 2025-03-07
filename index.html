@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>vibecode.life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vibe w me</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for a pixel vibe -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1 class="neon-text">vibecode.life</h1>
+    <h1 class="neon-text">vibe coding is life</h1>
     <div class="terminal">
-      <input type="text" id="command" placeholder="> type 'vibe' to start">
+      <input type="text" class="text-md" id="command" placeholder="> type 'vibe' to start">
       <div id="output" class="code-block"></div>
     </div>
     <a href="https://x.com/ShashwatBa" class="x-link" target="_blank">join the flow</a>
@@ -25,7 +26,7 @@
     input.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         const cmd = input.value.toLowerCase();
-        output.innerHTML = cmd === 'vibe' ? '> stay in the flow' : '> command not found';
+        output.innerHTML = cmd === 'vibe' ? '> MCPs are the future' : '> command not found';
         input.value = '';
       }
     });
